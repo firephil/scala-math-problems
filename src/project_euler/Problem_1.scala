@@ -32,7 +32,7 @@ object Problem_1 extends App{
    }                                              //> imper2: => Int
    
    def imper3 = {
-		var i,sum =0
+		var i,sum = 0
 		
 		while (i < 1000) {
 		 if( i % 3 ==0 || i % 5 ==0)
@@ -47,5 +47,12 @@ object Problem_1 extends App{
    val res = func                                 //> res  : Int = 233168
    val t2 = (System.nanoTime() - t1 )/1000        //> t2  : Long = 30305
    println(s"The result is: $res time taken $t2 ms ")
+   
+   
+   
+   val t3 = System.nanoTime()                     //> t1  : Long = 88325480457338
+   val res1 = imper2                                 //> res  : Int = 233168
+   val t4 = (System.nanoTime() - t3 )/1000        //> t2  : Long = 30305
+   println(s"The result is: $res time taken $t4 ms ")
 
 }
