@@ -8,15 +8,15 @@ object Timer extends App{
 		val r = f
 		val t1 = System.nanoTime()
 		
-		val time = ((t1-t0)/1000)
+		val time = (t1-t0) /1000
 		
-	
-	//println(s"The result is: $r time taken $time ms ")
-  
+		
+	println(s"The result is: $r time taken $time ms ")
+		
 	time
   }
   
-  def averageTimeTaken[R](f: => R)(times:Int = 10) : Unit = {
+  def averageTimeTaken[R](times:Int = 10)(f: => R) : Unit = {
     
      
       var result = 0L
@@ -30,13 +30,18 @@ object Timer extends App{
 	  }
 	  
       //average time taken
-	  val average = result/times
+	 val average = result/times
 	 println(s"time taken: $average ms ")
+	
   }
   
   
-  averageTimeTaken(Problem_1.func)(50)
-  averageTimeTaken(Problem_1.imper2)(50)
-  averageTimeTaken(Problem_1.imper3)(50)
-  println("Time taken functional method: "+time(Problem_1.func))
+  //averageTimeTaken(5000)(Problem_1.func)
+  //averageTimeTaken(50)(Problem_1.imper2)
+  //averageTimeTaken(50)(Problem_1.imper3)
+  //static method name printing
+  //println("Time taken functional method: "+time(Problem_1.func))
+  
+  
+  time(Problem_1.func1)
 }
