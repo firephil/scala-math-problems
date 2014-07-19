@@ -52,20 +52,4 @@ object Problem_1 {
     
     (name,res)
    }
-   
-   //> imper3: => Int
-  /*
-   val t1 = System.nanoTime()                     //> t1  : Long = 88325480457338
-   val res = func                                 //> res  : Int = 233168
-   val t2 = (System.nanoTime() - t1 )/1000        //> t2  : Long = 30305
-   println(s"The result is: $res time taken $t2 ms ")
-   println(func1)
-   
-   
-   
-   val t3 = System.nanoTime()                     //> t1  : Long = 88325480457338
-   val res1 = imper2                                 //> res  : Int = 233168
-   val t4 = (System.nanoTime() - t3 )/1000        //> t2  : Long = 30305
-   println(s"The result is: $res time taken $t4 ms ")
-  */
 }
