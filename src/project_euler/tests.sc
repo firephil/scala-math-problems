@@ -7,22 +7,16 @@ package project_euler
 
 object test {
 	
-def time[R](f: => R): Unit = {
-		val t0 = System.nanoTime()
-		val r = f
-		val t1 = System.nanoTime()
-		
-		val time = ((t1-t0)/1000)
-		
-	
-	println(s"The result is: $r time taken $time ms ")
-	
-	
-  }                                               //> time: [R](f: => R)Unit
+  def squareOfSum(r:Range ):Long ={
+   val x = r.sum
+   
+   x*x
+  }                                               //> squareOfSum: (r: Range)Long
   
+  def sumOfSquares(r:Range):Long = r.toList.map(x => x*x ).sum
+                                                  //> sumOfSquares: (r: Range)Long
   
-  
-  
-  
-  
+  def dif(r:Range) = squareOfSum(r) - sumOfSquares(r)
+                                                  //> dif: (r: Range)Long
+  dif(1 to 100)                                   //> res0: Long = 25164150
 }
