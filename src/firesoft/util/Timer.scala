@@ -1,4 +1,5 @@
-package project_euler
+package firesoft.util
+
 
 object Timer extends App{
   
@@ -34,14 +35,4 @@ object Timer extends App{
 	 println(s"time taken: $average ms ")
 	
   }
-  
-  
-  //averageTimeTaken(5000)(Problem_1.func)
-  //averageTimeTaken(50)(Problem_1.imper2)
-  //averageTimeTaken(50)(Problem_1.imper3)
-  //static method name printing
-  //println("Time taken functional method: "+time(Problem_1.func))
-  
-  
-  time(Problem_1.func1)
 }
