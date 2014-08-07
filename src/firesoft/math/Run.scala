@@ -1,6 +1,7 @@
 package firesoft.math
 
-import firesoft.util.Timer
+import firesoft.util._
+
 
 object Run extends App {
 	
@@ -13,7 +14,27 @@ object Run extends App {
 	//Timer.time(Factorial.recursive(5))
 	//Timer.time(Factorial.tailRecursive(5))
     //Timer.time(Fibonnaci.functional(12))
-	Timer.time(Fibonnaci.closedform(46))
-	Timer.time(Fibonnaci.imperative(46))
-	Timer.time(Fibonnaci.tailRecursive(46))
+	//val n = 22385
+    //Timer.time(Fibonnaci.closedform(n))
+	//Timer.time(Fibonnaci.imperative(n))
+	//Timer.time(Fibonnaci.tailRecursive(n))
+	//Timer.time(Fibonnaci.tailRecursiveBig(n))
+	//Timer.time(Fibonnaci.imperativeBig(n))
+	//Timer.time(Fibonnaci.closedformBig(n))
+	//Timer.time(Fibonnaci.closedformBigDecimal(n))
+	
+	
+	val n = 500
+	
+	val fib = Timer.timeString(Fibonnaci.imperativeBig(n))
+	
+	
+	
+	
+	
+	FileWriter.write(fib, "c://fibonnaci2.txt")
+      
 }
+
+
+
