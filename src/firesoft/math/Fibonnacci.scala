@@ -5,12 +5,7 @@ import scala.annotation.tailrec
 
 object Fibonnacci {
 
-
-	def functional(n : Int) :Int = { 
-			
-	  (0 to n).reduce(_+_)
-	}
-	
+		
 	 /*	
 	  * Fib(n) = 1/sqrt(5) * (phi^n - psi'^n)
 	 	phi = (1 + sqrt(5) / 2)
@@ -107,5 +102,11 @@ object Fibonnacci {
 	   }
 	  
 	  aux(n,1,0)
+	}
+	
+	// not correct
+	def functional(n : Int) :Int = { 
+			
+	  (0 to n).reduce(_+_)
 	}
 }
