@@ -3,7 +3,7 @@ import scala.annotation.tailrec
 
 // if n > 46 integer overflow
 
-object Fibonnaci extends App {
+object Fibonnacci {
 
 
 	def functional(n : Int) :Int = { 
@@ -108,6 +108,4 @@ object Fibonnaci extends App {
 	  
 	  aux(n,1,0)
 	}
-
-	
 }
