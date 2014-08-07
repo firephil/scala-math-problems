@@ -26,7 +26,7 @@ object Run extends App {
 	
 	val n = 500
 	
-	val fib = Timer.timeString(Fibonnaci.imperativeBig(n))
+	val fib = Timer.timeString(Fibonnacci.imperativeBig(n))
 	
 	
 	
