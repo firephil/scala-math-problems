@@ -10,7 +10,8 @@ object Fibonnacci {
 	  * Fib(n) = 1/sqrt(5) * (phi^n - psi'^n)
 	 	phi = (1 + sqrt(5) / 2)
 	 	psi = (1 - sqrt(5) / 2)
-	  *  
+	  * 
+	  *   
 	  */
 	def closedform (n : Int) : Int = {
 	  
