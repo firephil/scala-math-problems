@@ -1,17 +1,14 @@
 package firesoft.math
+import scala.annotation.tailrec
+
+// if n > 46 integer overflow
 
 object Fibonnaci extends App {
 
 
 	def functional(n : Int) :Int = { 
-	
-	  lazy val fs: Stream[Int] = 0 #:: 1 #:: fs.zip(fs.tail).map(p => p._1 + p._2)
-                                                 
-      val res = fs.take(n).toArray              
-      
-      val result = res(res.length-1)                
-
-      result
+			
+	  (0 to n).reduce(_+_)
 	}
 	
 	 /*	
@@ -22,7 +19,43 @@ object Fibonnaci extends App {
 	  */
 	def closedform (n : Int) : Int = {
 	  
-	   0
+	   val root5 = math.sqrt(5)
+	   
+	   val phi = (1 + root5)/2
+	   
+	   val psi = (1- root5)/2
+	   
+	   val fn = (math.pow(phi,n) -  math.pow(psi,n))/root5
+	
+	   fn.toInt
 	 }
+	
+	def imperative( n : Int ) : Int = {
+	  var a = 0
+	  var b = 1
+	  var i = 0	  
+	 
+	  while( i < n ) {
+	    val c = a + b
+	    a = b
+	    b = c
+	    i = i + 1
+	  } 
+	a
+	}
+	
+		
+	def tailRecursive(n :Int) : Int = {
+	  
+	  @tailrec
+	   def aux(n : Int, next :Int, acc :Int) :Int ={
+	     
+	     if(n == 0) acc
+		  else aux(n-1, acc + next,next)
+	   }
+	  
+	  aux(n,1,0)	
+	}
+
 	
 }
