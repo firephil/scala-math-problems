@@ -3,14 +3,9 @@ import scala.annotation.tailrec
 
 // if n > 46 integer overflow
 
-object Fibonnaci extends App {
+object Fibonnaci {
 
-
-	def functional(n : Int) :Int = { 
-			
-	  (0 to n).reduce(_+_)
-	}
-	
+		
 	 /*	
 	  * Fib(n) = 1/sqrt(5) * (phi^n - psi'^n)
 	 	phi = (1 + sqrt(5) / 2)
@@ -108,6 +103,10 @@ object Fibonnaci extends App {
 	  
 	  aux(n,1,0)
 	}
-
 	
+	// not correct
+	def functional(n : Int) :Int = { 
+			
+	  (0 to n).reduce(_+_)
+	}
 }
