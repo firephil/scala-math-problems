@@ -39,17 +39,17 @@ object Fibonnacci {
 	  fn.toLong
 	 }
 	
-	def closedformBigDecimal (n : Int) : Long = {
+	def closedformBigDecimal (n : Int) : BigInt = {
 	  
-	   val root5 = math.sqrt(5)
+	   val root5 = Root.sqr(5)
 	   
-	   val phi : Double = (1 + root5)/2
+	   val phi  = (1 + root5)/2
 	   
-	   val psi : Double  = (1 - root5)/2
+	   val psi  = (1 - root5)/2
 	   
-	   val fn : BigDecimal = (BigDecimal(phi).pow(n) -  BigDecimal(psi).pow(n))/root5
+	   val fn : BigDecimal = (phi.pow(n) -  psi.pow(n))/root5
 	
-	  fn.toLong
+	  fn.toBigInt
 	 }
 	
 	def imperative( n : Int ) : Int = {
