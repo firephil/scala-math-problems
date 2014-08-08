@@ -1,4 +1,4 @@
-package fibonacci_numbers
+package fisoft.math
 
 object tests {
   
