@@ -5,14 +5,8 @@ object Timer extends App{
   
   
   def timePrint[R](f: => R): Unit = {
-		val t0 = System.nanoTime()
-		val r = f
-		val t1 = System.nanoTime()
 		
-		val time = (t1-t0) /1000
-		
-		
-	println(s"The result is: $r time taken $time microsec ")
+	println(timeString(f))
   }
  
   def time[R](f: => R): Long = {
@@ -30,16 +24,24 @@ object Timer extends App{
 		val r = f
 		val t1 = System.nanoTime()
 		
-		val time = (t1-t0) /1000
+		val nanos = (t1-t0)
 		
+		val ms = nanos /1000000d
 		
-	s"time taken $time microsec \nThe result is: $r"
+		val st = ms.toString.slice(0,5)
+		
+		val result = s"time taken $st ms \nThe result is: $r"
+		
+		result
+}
+  
+  def time2file[R](f: => R)(path : String) : Unit = {
+    
+    FileWriter.write(timeString(f), path)
   }
+ 
   
-  
-  
-  
-  def averageTimeTaken[R](times:Int = 10)(f: => R) : Unit = {
+  def average[R](times:Int = 10)(f: => R) : Unit = {
     
      
       var result = 0L
@@ -53,7 +55,7 @@ object Timer extends App{
 	  }
 	  
       //average time taken
-	 val average = result/times
+	 val average = result/(times*1000d)
 	 println(s"time taken: $average ms ")
 	
   }
