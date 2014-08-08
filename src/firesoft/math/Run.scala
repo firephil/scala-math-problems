@@ -12,8 +12,8 @@ object Run extends App {
 	Timer.timePrint(Fibonnacci.imperativeBig(n))
 	//FileWriter.write(fib, "c://fibonnaci2.txt")
 	
-    Timer.timePrint(Fibonnacci.cFormDecimal(n))
-	Timer.timePrint(Fibonnacci.closedFormDecimal(n))
+    Timer.timePrint(FibClosedForm.decimal_scala(n))
+	Timer.timePrint(FibClosedForm.decimal_java(n))
 	    
 
 }
