@@ -24,7 +24,7 @@ object FibClosedForm {
 	   fn.toInt
 	 }
 	
-	def Big (n : Int) : Long = {
+	def big (n : Int) : Long = {
 	  
 	   val root5 = math.sqrt(5)
 	   
