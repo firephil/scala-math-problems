@@ -77,7 +77,6 @@ object Fibonacci {
 	  
 	  val res = aux(0, 1).take(n+1).takeRight(1)
 	  
-	 
 	  res.head
 	}
 	

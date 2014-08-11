@@ -29,8 +29,10 @@ object Run extends App {
 	 Timer.timePrint(Fibonacci.stream(n))
 	 Timer.timePrint(Fibonacci.zipStream(n))
 	 */
-	 Timer.timePrint(Factorial.imperative(5))
-	 Timer.timePrint(Factorial.tailRecursive(5))
+	 //Timer.timePrint(Factorial.imperative(5))
+	//Timer.timePrint(Factorial.tailRecursive(5))
+	 
+	 Timer.timePrint(Factorial.imperativeBig(n))
 
 }
 

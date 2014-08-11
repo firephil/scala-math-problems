@@ -1,6 +1,6 @@
 package firesoft.math
 import scala.annotation.tailrec
-import firesoft.util.Timer
+
 
 object Factorial 
 {
@@ -47,9 +47,19 @@ object Factorial
 	     x += 1
 	   }
 	     
+	    res
+	 }
+	  def imperativeBig (n : BigInt) : BigInt = {
+	   
+	    var res = BigInt(1)
+	    var x = BigInt(1)
+	    
+	   while(x <= n)
+	   {
+	     res *= x 
+	     x += 1
+	   }
 	     
 	    res
 	 }
-	
-	 
 }
