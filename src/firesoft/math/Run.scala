@@ -17,7 +17,7 @@ object Run extends App {
 	
 	
 	
-	 Timer.timePrint(Fibonacci.imperativeBig(n))
+	/* Timer.timePrint(Fibonacci.imperativeBig(n))
 	 Timer.timePrint(Fibonacci.tailRecursiveBig(n))
 	 
 	 //limit n = 46
@@ -28,6 +28,9 @@ object Run extends App {
 	 
 	 Timer.timePrint(Fibonacci.stream(n))
 	 Timer.timePrint(Fibonacci.zipStream(n))
+	 */
+	 Timer.timePrint(Factorial.imperative(5))
+	 Timer.timePrint(Factorial.tailRecursive(5))
 
 }
 

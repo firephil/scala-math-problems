@@ -38,7 +38,17 @@ object Factorial
 	 
 	  def imperative (n : Int) : Int = {
 	   
-	   0
+	    var res = 1
+	    var x = 1
+	    
+	   while(x <= n)
+	   {
+	     res *= x 
+	     x += 1
+	   }
+	     
+	     
+	    res
 	 }
 	
 	 
