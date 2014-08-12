@@ -1,11 +1,11 @@
 package firesoft.math
 
 import firesoft.util._
-
+import java.math.MathContext
 
 object Run extends App {
 	
-	val n = 100
+	val n = 1000
 	
 	
 	
@@ -30,7 +30,9 @@ object Run extends App {
 	 Timer.timePrint(Fibonacci.zipStream(n))
 	 */
 	 //Timer.timePrint(Factorial.imperative(5))
-	//Timer.timePrint(Factorial.tailRecursive(5))
+	
+	
+	Timer.timePrint(Factorial.tailRecBig(n))
 	 
 	 Timer.timePrint(Factorial.imperativeBig(n))
 

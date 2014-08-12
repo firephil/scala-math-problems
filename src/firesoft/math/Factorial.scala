@@ -1,6 +1,6 @@
 package firesoft.math
 import scala.annotation.tailrec
-
+import java.math.MathContext
 
 object Factorial 
 {
@@ -15,6 +15,17 @@ object Factorial
 	 {
 	   @tailrec
 	   def aux(n : Int, acc :Int) :Int = 
+	   {
+	     
+		  if(n == 0) acc
+		  else aux(n-1, acc * n)
+	   }
+	   aux(n,1)	   
+	 }
+	 def tailRecBig(n : BigInt) : BigInt = 
+	 {
+	   @tailrec
+	   def aux(n : BigInt, acc :BigInt) :BigInt = 
 	   {
 	     
 		  if(n == 0) acc
